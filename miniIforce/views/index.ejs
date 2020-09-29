@@ -1,0 +1,114 @@
+<html lang="en">
+<%- include('./partials/head.ejs')  %>
+
+<body>
+<%- include('./partials/nav.ejs')  %>
+
+<!-- Slide Show -->
+<div class="container">
+
+<section>
+  <img class="mySlides" src="cta-bg.jpg"
+  style="width:1200px; height:80%; " alt="building image">
+
+  <img class="mySlides" src="hero-bg.jpg"
+  style="width:1200px; height:80%;" alt="building image">
+
+  <img class="mySlides" src="city.jpg"
+  style="width:1200px; height:80%;" alt="people image">
+</section>
+<div class="text-block">
+  <h4>iForce Technologies</h4>
+  <p>Do Everything Faster !</p>
+</div>
+</div>
+<!-- End Slide Show -->
+
+<!-- ======= About Section ======= -->
+ <section id="about" class="about">
+<br>
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" >
+        <img src="about.jpg" class="img-fluid" alt="" width="600px" height="600px" >
+      </div>
+
+      <div style = "position: absolute; ">
+        <div style="position: relative; left: 610px; bottom: 550px;">
+          <h3 style="font-family: 'Noto Serif', serif; color:#283747;">YOUR REAL-TIME FIELD SERVICE SOLUTION IS HERE. </h3> <br>
+          <p> Automate Field Service Management using Location Tracking, CRM functionalities,</p>
+          <p> Task Scheduling and more. </p>
+          <br><br>
+          <h3 style="font-family: 'Noto Serif', serif;color:#283747;">Monitor, Dispatch, and Generate leads</h3>
+          <br><p>Fully featured platform to track your day-to-day business on the field</p>
+        </div>
+      </div>
+      <br>
+</section>
+<!-- End About Section -->
+
+
+
+<!-- ======= Contact us Section ======= -->
+   <section id="ContactUs" >
+    <div class="contact">
+
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-6" >
+          <div class="info-box mb-4">
+            <img src="map-marker.svg" alt="address icon">
+            <h3>Our Address</h3>
+            <p>168 King Abdullah street, Amman, Jordan</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" style=" float: right; width: 50%;">
+          <div class="info-box  mb-4">
+            <img src="email.svg" alt="email icon">
+            <h3>Email Us</h3>
+            <p>contact@iforce.com</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" style=" float:left;width: 50%;">
+          <div class="info-box  mb-4">
+            <img src="phone.svg" alt="phone icon">
+            <h3>Call Us</h3>
+            <p>+962799744704</p>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="col-lg-6 ">
+          <iframe class="mb-4 mb-lg-0" src="https://maps.google.com/maps?q=168%2C%20king%20abdullah%202%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+        </div>
+
+    </div>
+  </section>
+<!-- End Contact Section -->
+
+
+
+<%- include('./partials/footer.ejs')  %>
+
+
+<script>
+  // Automatic Slideshow - change image every 3 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+  }
+  </script>
+
+</body>
+</html>

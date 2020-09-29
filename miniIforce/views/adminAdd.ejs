@@ -1,0 +1,247 @@
+<html lang="en">
+<%- include('./partials/head.ejs')  %>
+<%- include('./partials/lognav.ejs')  %>
+
+<body>
+<!-- header -->
+<h2 style="text-align: center; background-color: #f8eef8;">Welcome to iForce Technologies, Where Everything is Faster !</h2>
+<section>
+    <img class="mySlides" src="https://cdn.discordapp.com/attachments/751005345559609369/758296100594647070/declutter1.jpg" style="width:1200px; height:60%; " alt="building image">
+</section>
+<!-- End header  -->
+<br>
+
+    <h2 style="text-align: center; background-color: #f8eef8;">Please choose what do you want to add:</h2>
+
+<!-- start button view -->
+
+<!-- admin button -->
+<div class="center">
+    <div class="svg-wrapper" >
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+       <button id="myBtn" class="text" >Admin</button>
+    </div>
+</div>
+  
+  <br>
+  
+  <!-- customer button -->
+  <div class="center">
+    <div class="svg-wrapper">
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+       <button id ="myBtn2" class="text">Customer</button>
+    </div>
+  </div>
+
+  <br>
+ 
+  <!-- worker button -->
+  <div class="center">
+    <div class="svg-wrapper">
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+       <button id="myBtn3" class="text">Worker</button>
+    </div>
+  </div>
+<!-- end button view -->
+
+
+<!-- pop up page try -->
+<!-- The Admin Modal -->
+<div id="myModal" class="modal">
+
+<!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+<!-- admin pop up form -->
+<div class="create-blog content">
+    <form action="/adminAdd" method="POST">
+     <h2>Add a new Admin</h2>
+     <p>Please fill in this form to create a new admin.</p>
+     
+     <label for="firstname">First name:</label>
+     <input type="text" placeholder="Enter Username" id="firstname" name="firstname" required>
+
+     <label for="lastname">Last name:</label>
+     <input type="text" placeholder="Enter Username" id="lastname" name="lastname" required>
+
+     <label for="username">Username:</label>
+     <input type="text" placeholder="Enter Username" id="username" name="username" required>
+ 
+      <label for="email">Email:</label>
+      <input type="email" placeholder="Enter email" id="email" name="email" required>
+ 
+      <label for="password">Password:</label>
+      <input type="password" placeholder="Enter password" id="password" name="password" required>
+ 
+      <label for="password2">Repeat password:</label>
+      <input type="password" placeholder="Repeat password" id="password2" name="password2" required>
+  
+      <button type="submit"> Create </button>
+      <button type="button" class="cancelbtn">Cancel</button>
+     </form>
+  </div>
+
+  </div>
+</div>
+
+
+<!-- The customer Modal -->
+<div id="myModal2" class="modal2">
+
+    <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+<!-- customer pop up form -->
+<div class="create-blog content">
+    <form action="/customerAdd" method="POST">
+     <h2>Add a new customer</h2>
+     <p>Please fill in this form to create a new customer.</p>
+     <label for="firstname">First name:</label>
+     <input type="text" placeholder="Enter Username" id="firstname" name="firstname" required>
+
+     <label for="lastname">Last name:</label>
+     <input type="text" placeholder="Enter Username" id="lastname" name="lastname" required>
+
+     <label for="username">Username:</label>
+     <input type="text" placeholder="Enter Username" id="username" name="username" required>
+ 
+      <label for="email">Email:</label>
+      <input type="email" placeholder="Enter email" id="email" name="email" required>
+ 
+      <label for="password">Password:</label>
+      <input type="password" placeholder="Enter password" id="password" name="password" required>
+ 
+      <label for="password2">Repeat password:</label>
+      <input type="password" placeholder="Repeat password" id="password2" name="password2" required>
+  
+      <button type="submit"> Create </button>
+      <button type="button" class="cancelbtn">Cancel</button>
+     </form>
+  </div>
+
+ </div>
+</div>
+
+<!-- The worker Modal -->
+<div id="myModal3" class="modal3">
+
+    <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+<!-- worker pop up form -->
+<div class="create-blog content">
+    <form action="/workerAdd" method="POST">
+
+     <h2>Add a new worker</h2>
+     <p>Please fill in this form to create a new worker.</p>
+
+     <label for="firstname">First name:</label>
+     <input type="text" placeholder="Enter Username" id="firstname" name="firstname" required>
+
+     <label for="lastname">Last name:</label>
+     <input type="text" placeholder="Enter Username" id="lastname" name="lastname" required>
+
+     <label for="username">Username:</label>
+     <input type="text" placeholder="Enter Username" id="username" name="username" required>
+ 
+      <label for="email">Email:</label>
+      <input type="email" placeholder="Enter email" id="email" name="email" required>
+ 
+      <label for="password">Password:</label>
+      <input type="password" placeholder="Enter password" id="password" name="password" required>
+ 
+      <label for="password2">Repeat password:</label>
+      <input type="password" placeholder="Repeat password" id="password2" name="password2" required>
+
+      <label for="service">Services:</label>
+      <input type="text" placeholder="Enter service" id="service" name="service" required> 
+      
+      <label for="salary">Salary:</label>
+      <input type="number" placeholder="Enter salary" id="salary" name="salary" required>      
+  
+      <button type="submit"> Create </button>
+      <button type="button" class="cancelbtn">Cancel</button>
+     </form>
+  </div>
+
+    </div>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+var modal3= document.getElementById("myModal3");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close")[1];
+var span3 = document.getElementsByClassName("close")[2];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+</script>
+
+
+
+<%- include('./partials/footer.ejs')  %>
+</body>
+</html>

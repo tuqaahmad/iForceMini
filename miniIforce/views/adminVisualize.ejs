@@ -1,0 +1,66 @@
+<html lang="en">
+<%- include('./partials/head.ejs')  %>
+<%- include('./partials/lognav.ejs')  %>
+
+<body>
+<!-- header -->
+<h2 style="text-align: center; background-color: #f8eef8;">Welcome to iForce Technologies, Where Everything is Faster !</h2>
+
+<img class="mySlides" src="https://cdn.discordapp.com/attachments/751005345559609369/758991299688267836/2017-07-24-08-37-27-900x488.jpg" style="width:1200px; height:60%;" alt="desk image">
+
+<!-- End header  -->
+
+<h2 style="text-align: center; background-color: #f8eef8;">Please choose what you want to visualize : </h2>
+
+
+<!-- button view admins -->
+ <div class="center">
+    <div class="svg-wrapper" >
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+  
+<!-- Direct button to go to the admin add page -->
+      <form action="/adminsDB" method = "get">
+       <button class="text" >Admins</button>
+      </form>  
+    </div>
+  </div>
+
+<br>
+
+
+<!-- button view customers -->
+ <div class="center">
+    <div class="svg-wrapper" >
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+  
+  <!-- Direct button to go to the admin add page -->
+      <form action="/customersDB" method = "get">
+       <button class="text" >Customers</button>
+      </form>  
+    </div>
+  </div>
+
+  <br>
+
+<!-- button view workers -->
+ <div class="center">
+    <div class="svg-wrapper" >
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+  
+<!-- Direct button to go to the admin add page -->
+      <form action="/workersDB" method = "get">
+       <button class="text" >Workers</button>
+      </form>  
+    </div>
+  </div>
+
+
+<%- include('./partials/footer.ejs')  %>
+</body>
+</html>

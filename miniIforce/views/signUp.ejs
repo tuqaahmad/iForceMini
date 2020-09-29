@@ -1,0 +1,33 @@
+<html lang="en">
+<%- include('./partials/head.ejs')  %>
+<%- include('./partials/nav.ejs')  %>
+
+<body>
+  <div class="create-blog content">
+   <form action="/signUp" method="POST">
+    <h2>Sign Up</h2>
+    <p>Please fill in this form to create an account.</p>
+    <label for="username">Username:</label>
+    <input type="text" placeholder="Enter Username" id="username" name="username" required>
+
+     <label for="email">Email:</label>
+     <input type="email" placeholder="Enter email" id="email" name="email" required>
+
+     <label for="password">Password:</label>
+     <input type="password" placeholder="Enter password" id="password" name="password" required>
+
+     <label for="password2">Repeat password:</label>
+     <input type="password" placeholder="Repeat password" id="password2" name="password2" required>
+
+     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+     <button type="submit"> Sign up </button>
+     <button type="button" class="cancelbtn">Cancel</button>
+
+
+   </form>
+ </div>
+
+<%- include('./partials/footer.ejs')  %>
+</body>
+</html>

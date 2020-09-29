@@ -1,0 +1,33 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/nav.ejs')  %>
+
+
+<body>
+     <div class="create-blog content">
+      <form action="/login" method="POST"> 
+        <h2>Login </h2>
+        <p>Please fill in this form to log into iForce.</p>
+        <label for="username">Username:</label>
+        <input type="text" placeholder="Enter Username" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter password" id="password" name="password" required>
+
+        <label for="type">Type:</label><br>
+        <select name="type" id="type" style="width: 400px; height: 35px; font-size: 15px;">
+          <option>Select</option>
+          <option value="admin">Admin</option>
+          <option value="worker">Worker</option>
+          <option value="customer">Customer</option>
+        </select>
+<br><br>
+        <button type="submit"> Login</button>
+
+      </form>
+    </div>
+  
+
+<%- include('./partials/footer.ejs')  %>
+</body>
+</html>

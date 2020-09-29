@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+     body{
+       max-width: 1200px;
+       margin: 20px auto;
+       padding: 0 20px;
+       font-family: 'Noto Serif', serif;
+       max-width: 1200px;
+     }
+     p, h1, h2, h3, a, ul{
+       margin: 0;
+       padding: 0;
+       text-decoration: none;
+       color: #222;
+     }
+     /* nav & footer styles */
+     nav{
+       display: flex;
+       justify-content: flex-end;
+       margin-bottom: 60px;
+       padding-bottom: 10px;
+       border-bottom: 1px solid #ddd;
+       text-transform: uppercase;
+     }
+     nav ul{
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-end;
+     }
+     nav li{
+       list-style-type: none;
+       margin-left: 20px;
+     }
+     nav h1{
+       font-size: 3em;
+     }
+     nav p, nav a{
+       color: #777;
+       font-weight: 300;
+     }
+     footer{
+       color: #777;
+       text-align: center;
+       margin: 80px auto 20px;
+     }
+     h2{
+       margin-bottom: 40px;
+     }
+     h3{
+       text-transform: capitalize;
+       margin-bottom: 8px;
+     }
+     .content{
+       margin-left: 20px;
+     }
+     /* index styles */
+     /* details styles */
+     /* create styles */
+     .create-blog form{
+       max-width: 400px;
+       margin: 0 auto;
+     }
+     .create-blog input,
+     .create-blog textarea{
+       display: block;
+       width: 100%;
+       margin: 10px 0;
+       padding: 8px;
+     }
+     .create-blog label{
+       display: block;
+       margin-top: 24px;
+     }
+     textarea{
+       height: 120px;
+     }
+     .create-blog button{
+       margin-top: 20px;
+       background: crimson;
+       color: white;
+       padding: 6px;
+       border: 0;
+       font-size: 1.2em;
+       cursor: pointer;
+     }
+ 
+ /*--------------------------------------------------------------
+ # Contact
+ --------------------------------------------------------------*/
+ .contact .info-box {
+   color: #444444;
+   text-align: center;
+   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+   padding: 20px 0 30px 0;
+   position: relative;
+   
+ }
+ 
+ .contact .info-box h3 {
+   font-size: 20px;
+   color: #777777;
+   font-weight: 700;
+   margin: 10px 0;
+ }
+ 
+ @-webkit-keyframes animate-loading {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+ 
+ @keyframes animate-loading {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+ 
+ .container {
+   position: relative;
+   font-family: 'Noto Serif', serif;
+ }
+ 
+ .text-block {
+   position: absolute;
+   bottom: 50%;
+   left: 20px;
+   background-color: none;
+   color: white;
+   padding-left: 20px;
+   padding-right: 20px;
+   font-size: 40px;
+ }
+
+
+
+
+
+ /*--------------------------------------------------------------
+ # btn for adminViews
+ --------------------------------------------------------------*/
+/* 
+html, body {
+  background: #333;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+} */
+.center {
+  margin: 0;
+  position: relative;
+  top: 1%;
+  left: auto;
+
+  /* -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+}
+.svg-wrapper {
+  height: 60px;
+	margin: 0 auto;
+  position: relative;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 320px;
+  background: #f8eef8;
+  overflow: hidden;
+  text-align: center;
+
+
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #19f6e8;
+}
+
+.text {
+  color: black;
+  background-color: Transparent;
+  border: none;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+
+/* -------------------------------------------------
+                 POP UP PAGE 
+----------------------------------------------------*/
+
+
+/* The Modal (background) */
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0; 
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+.modal2{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal3 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close{
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Table designs */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+

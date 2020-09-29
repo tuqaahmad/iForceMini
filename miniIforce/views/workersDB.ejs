@@ -1,0 +1,50 @@
+<html lang="en">
+<%- include('./partials/head.ejs')  %>
+<%- include('./partials/lognav.ejs')  %>
+
+<body>
+
+    <div style="overflow-x:auto;">
+        <table>
+    
+          <tr>
+            <th>ID </th>
+            <th>Username</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Service</th>
+            <th>Salary</th>
+            <th>Created At</th>
+
+            
+          </tr>
+          <% for (var i=0; i < result.length; i++) { %>
+            <% if (result.length > 0) { %>
+    
+          <tr>
+    
+            <td> <%- JSON.stringify(result[i]._id)  %> </td>
+            <td> <%- JSON.stringify(result[i].username)  %> </td>
+            <td> <%- JSON.stringify(result[i].firstname)  %> </td>
+            <td> <%- JSON.stringify(result[i].lastname)  %> </td>
+            <td> <%- JSON.stringify(result[i].email)  %> </td>
+            <td> <%- JSON.stringify(result[i].service)  %> </td>
+            <td> <%- JSON.stringify(result[i].salary)  %> </td>
+            <td> <%- JSON.stringify(result[i].createdAt)  %> </td>
+
+    
+          </tr>
+          
+          <% } else { %>
+            <p>There are no workers to display</p>
+            <%  } %>
+
+          <% } %>
+    
+        </table>
+      </div>
+
+<%- include('./partials/footer.ejs')  %>
+</body>
+</html>

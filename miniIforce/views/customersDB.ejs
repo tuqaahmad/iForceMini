@@ -1,0 +1,38 @@
+<html lang="en">
+<%- include('./partials/head.ejs')  %>
+<%- include('./partials/lognav.ejs')  %>
+
+<body>
+
+    <div style="overflow-x:auto;">
+        <table>
+          <tr>
+            <th>ID </th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Created at</th>
+
+          </tr>
+
+          <% for (var i=0; i < result.length; i++) { %>
+            <% if (result.length > 0) { %>
+    
+          <tr>    
+            <td> <%- JSON.stringify(result[i]._id)  %> </td>
+            <td> <%- JSON.stringify(result[i].username)  %> </td>
+            <td> <%- JSON.stringify(result[i].email)  %> </td>
+            <td> <%- JSON.stringify(result[i].createdAt)  %> </td>
+
+            
+          </tr>          
+          <% } else { %>
+            <p>There are no customers to display</p>
+            <%  } %>
+          <% } %>
+    
+        </table>
+      </div>
+
+<%- include('./partials/footer.ejs')  %>
+</body>
+</html>
